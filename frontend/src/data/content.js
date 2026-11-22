@@ -140,16 +140,6 @@ export const skillGroups = [
     ],
   },
   {
-    name: 'Virtualisation et conteneurs',
-    items: [
-      { name: 'VirtualBox', level: 'Pratiqué' },
-      { name: 'KVM / QEMU', level: 'Pratiqué' },
-      { name: 'Docker', level: 'Pratiqué' },
-      { name: 'Docker Compose', level: 'Pratiqué' },
-      { name: 'Docker Swarm', level: 'Notions' },
-    ],
-  },
-  {
     name: 'Data Science et IA',
     items: [
       { name: 'Python', level: 'En apprentissage' },
