@@ -31,7 +31,7 @@ export default function Home() {
         <div className="container hero-in">
           <h1 id="hero-title" className="hero-name" aria-label={profile.name}>
             <span>Eliel</span>
-            <span>Sawadogo</span>
+            <span class>Sawadogo</span>
           </h1>
           <div className="hero-cols">
             <div>
@@ -73,11 +73,11 @@ export default function Home() {
             </div>
             <div>
               <h3>Applications web</h3>
-              <p>BK Coffee Shop est en cours de développement, avec React, Node.js et PostgreSQL. Solidarity Group est déployé.</p>
+              <p>BK Coffee Shop est en cours de développement, avec React, Spring Boot. Solidarity Group est déployé.</p>
             </div>
             <div>
               <h3>Data Science et IA</h3>
-              <p>Python, NumPy, Pandas et mathématiques pour le Machine Learning, en vue du parcours InDIA à l’ESMT Dakar.</p>
+              <p>Python, NumPy, Pandas et mathématiques pour le Machine Learning.</p>
             </div>
           </div>
         </div>

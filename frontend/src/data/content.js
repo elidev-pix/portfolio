@@ -36,7 +36,7 @@ export const nav = [
 export const aboutText = [
   'Je suis étudiant à l’École Supérieure Multinationale des Télécommunications (ESMT), à Ouagadougou. Les deux premières années de la Licence en Télécommunications et Informatique (LTI) forment un tronc commun ; en troisième année, j’ai choisi l’option Administration et Sécurité des Réseaux (ASR).',
   'Mon parcours associe développement logiciel, administration des systèmes et infrastructures réseau. J’ai construit des applications web complètes avec React, Node.js et Laravel, et je configure en parallèle des services Linux, des routeurs et des environnements virtualisés en travaux pratiques.',
-  'Depuis cette année, je consolide mes bases en Python, en programmation orientée objet, en mathématiques appliquées au Machine Learning et en analyse de données. Mon objectif est d’intégrer le cycle Ingénieur de Conception des Télécommunications de l’ESMT Dakar, parcours Ingénierie des données et Intelligence Artificielle (InDIA), pour développer des solutions adaptées aux enjeux des télécommunications et du numérique.',
+  'Depuis cette année, je consolide mes bases en Python, en programmation orientée objet, en mathématiques appliquées au Machine Learning et en analyse de données.',
 ]
 
 export const motivations = [
@@ -60,6 +60,7 @@ export const timeline = [
 export const experiences = [
   {
     company: 'YIRMEA',
+    logo: '/logo/yirmea_logo.png',
     role: 'Stagiaire, Développeur Web Full Stack',
     period: 'Août – Octobre 2026',
     points: [
@@ -73,6 +74,7 @@ export const experiences = [
   },
   {
     company: 'SWITCH-MAKER',
+    logo: '/logo/switch-maker_logo.png',
     role: 'Stagiaire, initiation au développement backend',
     period: 'Juillet – Septembre 2025',
     points: [
@@ -114,8 +116,6 @@ export const skillGroups = [
       { name: 'Node.js', level: 'Pratiqué' },
       { name: 'Express', level: 'Pratiqué' },
       { name: 'Laravel', level: 'Pratiqué' },
-      { name: 'HTML5', level: 'Pratiqué' },
-      { name: 'CSS3', level: 'Pratiqué' },
       { name: 'Spring Boot', level: 'En apprentissage' },
       { name: 'Angular', level: 'Notions' },
     ],
@@ -190,7 +190,7 @@ export const projects = [
     slug: 'bk-coffee-shop',
     title: 'BK Coffee Shop',
     kind: 'Plateforme de commande et de gestion',
-    status: 'En cours de développement',
+    status: 'Déployé',
     cover: 'order',
     summary: 'Un site de présentation avec commande en ligne, et un espace d’administration pour suivre les ventes et le personnel.',
     context: 'Projet de plateforme pour un coffee shop : présenter ses produits et ses tarifs, prendre des commandes en ligne et aider à la gestion quotidienne.',
@@ -208,12 +208,12 @@ export const projects = [
       'Suivi des encaissements et des produits vendus',
       'Gestion du personnel, des horaires et des activités',
     ],
-    tech: ['React', 'Node.js', 'Express', 'Neon PostgreSQL'],
+    tech: ['React', 'Spring Boot', 'Java', 'Neon (PostgreSQL)'],
     contributions: ['Conception et développement en cours du site, du parcours de commande et de l’espace d’administration.'],
     difficulties: [],
     solutions: [],
     skills: ['Modélisation relationnelle avec PostgreSQL', 'Conception d’un parcours de commande', 'Interface d’administration'],
-    demo: null,
+    demo: 'https://bk-coffee.vercel.app/',
     repo: null,
   },
   {
@@ -246,69 +246,7 @@ export const projects = [
     demo: null,
     repo: null,
   },
-  {
-    slug: 'ftp-sftp-ubuntu-server',
-    title: 'Services FTP et SFTP sous Ubuntu Server',
-    kind: 'Projet académique · L2 LTI, ESMT',
-    status: 'Réalisé',
-    cover: 'lock',
-    summary: 'Deux services de transfert de fichiers, FTP et SFTP, avec comptes cloisonnés et accès restreints.',
-    context: 'Projet de Licence 2 sur les services de transfert de fichiers et leur sécurisation sur un serveur Ubuntu.',
-    problem: 'Comment permettre le transfert de fichiers tout en limitant ce que chaque utilisateur peut voir et faire sur le serveur ?',
-    objectives: [
-      'Installer et configurer vsftpd et un service SFTP basé sur OpenSSH.',
-      'Gérer les comptes et les permissions.',
-      'Restreindre les accès et protéger le serveur par un pare-feu.',
-    ],
-    features: [
-      'Installation de vsftpd',
-      'Service SFTP basé sur OpenSSH',
-      'Gestion des utilisateurs et des permissions',
-      'Restriction des accès',
-      'Cloisonnement chroot',
-      'Restriction du shell',
-      'Pare-feu UFW',
-      'Tests depuis Windows et FileZilla',
-    ],
-    tech: ['Ubuntu Server', 'vsftpd', 'OpenSSH', 'UFW', 'VirtualBox', 'FileZilla'],
-    contributions: ['Installation, configuration et tests de bout en bout des deux services.'],
-    difficulties: [],
-    solutions: [],
-    skills: ['Administration d’un serveur Linux', 'Sécurisation des accès (chroot, shell, pare-feu)', 'Gestion des utilisateurs et des permissions'],
-    demo: null,
-    repo: null,
-  },
-  {
-    slug: 'virtualisation-docker-infrastructures',
-    title: 'Virtualisation, Docker et infrastructures',
-    kind: 'Travaux pratiques · L3 ASR, ESMT',
-    status: 'En apprentissage',
-    cover: 'layers',
-    summary: 'Une série de travaux pratiques, de la machine virtuelle aux conteneurs orchestrés, jusqu’au stockage objet compatible S3.',
-    context: 'Travaux pratiques du module Virtualisation et Cloud Computing. Ce sont des exercices d’apprentissage, pas une expertise professionnelle en cloud.',
-    problem: 'Comment passer d’une machine physique à des machines virtuelles, puis à des services conteneurisés qu’on peut déployer, exposer et mettre à l’échelle ?',
-    objectives: [
-      'Créer et administrer des machines virtuelles avec KVM, QEMU et libvirt.',
-      'Conteneuriser et déployer des services avec Docker et Docker Compose.',
-      'Mutualiser des ressources avec Docker Swarm.',
-    ],
-    features: [
-      'KVM, QEMU et libvirt : création et administration de machines virtuelles',
-      'Docker et Docker Compose',
-      'Docker Swarm',
-      'Déploiement de services',
-      'Nginx et reverse proxy',
-      'Mise à l’échelle des conteneurs',
-      'Stockage objet compatible S3 avec Garage',
-    ],
-    tech: ['KVM', 'QEMU', 'libvirt', 'Docker', 'Docker Compose', 'Docker Swarm', 'Nginx', 'Garage (S3)'],
-    contributions: ['Réalisation des travaux pratiques et rédaction des comptes rendus.'],
-    difficulties: [],
-    solutions: [],
-    skills: ['Virtualisation avec KVM', 'Conteneurisation avec Docker', 'Reverse proxy avec Nginx', 'Stockage objet compatible S3'],
-    demo: null,
-    repo: null,
-  },
+
 ]
 
 export const statusTone = (s) => (s === 'Déployé' || s === 'Réalisé' ? 'done' : 'wip')
